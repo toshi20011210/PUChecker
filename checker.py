@@ -8,23 +8,10 @@ import time
 print('----------Start---------')
 browser = webdriver.Chrome('./chromedriver')
 
-
-#browser.get('https://daidata.goraggio.com/mypage')
-
-#browser.find_element(By.XPATH, '//*[@id="menulogin"]').click()
-
-#time.sleep(1)
-
-#username = browser.find_element(By.XPATH, '//*[@id="login_email"]')
-#username.send_keys('japan.toshi.taka@gmail.com')
-#password = browser.find_element(By.XPATH, '//*[@id="login_password"]')
-#password.send_keys('Taka84104aki')
-
-#browser.find_element(By.XPATH, '//*[@id="login"]').click()
-
 #赤坂ーーーーーーーーーーーーーーーーーーーーーー
 store = 'エスパス赤坂見附: '
 
+#店舗の台データオンラインのURL
 browser.get('https://daidata.goraggio.com/100952/accept')
 browser.find_element(By.XPATH, '//*[@id="Result-Column"]/div/nav/ul/li[2]/form/span/button').click()
 browser.find_element(By.XPATH, '//*[@id="gn_interstitial_close_icon"]').click()
@@ -75,5 +62,3 @@ try:
         i = i + 1
 except NoSuchElementException:
     nothing = 'nothing'
-
-#yes
