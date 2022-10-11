@@ -11,7 +11,6 @@ browser = webdriver.Chrome('./chromedriver')
 #赤坂ーーーーーーーーーーーーーーーーーーーーーー
 store = 'エスパス赤坂見附: '
 
-#店舗の台データオンラインのURL
 browser.get('https://daidata.goraggio.com/100952/accept')
 browser.find_element(By.XPATH, '//*[@id="Result-Column"]/div/nav/ul/li[2]/form/span/button').click()
 browser.find_element(By.XPATH, '//*[@id="gn_interstitial_close_icon"]').click()
@@ -32,8 +31,7 @@ try:
         xp2 = '//*[@id="Prime-Column"]/article/table/tbody/tr['+ str(i) +']/td[10]'
         k1 = browser.find_element(By.XPATH, xp2).text
 
-        #630
-        if int(k1) > 230:
+        if int(k1) > 630:
             print(store+kishu+n1+': '+k1)
         i = i + 1
 except NoSuchElementException:
@@ -56,8 +54,7 @@ try:
         xp2 = '//*[@id="Prime-Column"]/article/table/tbody/tr['+ str(i) +']/td[10]'
         k1 = browser.find_element(By.XPATH, xp2).text
 
-        #370
-        if int(k1) > 170:
+        if int(k1) > 370:
             print(store+kishu+n1+': '+k1)
         i = i + 1
 except NoSuchElementException:
