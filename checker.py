@@ -5,8 +5,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 import time
 
-print('----------Start---------')
 browser = webdriver.Chrome('./chromedriver')
+print('----------Start---------')
 
 #赤坂ーーーーーーーーーーーーーーーーーーーーーー
 store = 'エスパス赤坂見附: '
@@ -59,3 +59,5 @@ try:
         i = i + 1
 except NoSuchElementException:
     nothing = 'nothing'
+
+print('-----------End----------')
